@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.Billboard {
+  font-size: 90px;
+  margin: 20vh 0;
+  font-family: $ridley-font-stack;
+  line-height: 1;
+  text-align: center;
+}
+
+.Billboard__heading {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.Billboard__sub {
+  font-size: 0.48em;
+  display: block;
+  font-weight: 300;
+}
