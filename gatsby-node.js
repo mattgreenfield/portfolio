@@ -21,8 +21,6 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               title
-              date
-              display_order
             }
           }
         }
@@ -44,9 +42,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           type: path.includes('blog/') ? 'blog' : 'work',
-          title: node.frontmatter.title,
-          date: node.frontmatter.date,
-          display_order: node.frontmatter.display_order,
           prev,
           next,
         },

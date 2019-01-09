@@ -3,6 +3,7 @@ title: Responsive Menus in a CMS
 excerpt: My attempt at solving the problem of long site navigation menus on small screens.
 path: '/blog/responsive-menu'
 date: '2016-06-28'
+image: null
 ---
 
 In my day to day job I work at [Create](www.create.net), a CMS used by thousands of people.

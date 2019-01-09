@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout/Layout';
 import Billboard from '../components/Billboard/Billboard';
-import Showcase from '../components/Showcase/Showcase';
+import PostList from '../components/PostList/PostList';
+import Heading from '../components/Heading/Heading';
 
 export default function IndexPage({ data }) {
   const latestBlogPosts = data.blogPosts.edges;
-  const latestWorkPosts = data.workPosts.edges;
   const siteData = data.siteData.siteMetadata;
 
   return (
@@ -16,14 +16,20 @@ export default function IndexPage({ data }) {
         heading={siteData.title}
         subHeading={siteData.job_description}
       />
-      <Showcase title="Writing" to="/blog" items={latestBlogPosts} />
-      <Showcase title="Work" to="/work" items={latestWorkPosts} />
-      <h2>About</h2>
+      <PostList
+        title="Blog"
+        to="/blog"
+        headingLevel={2}
+        items={latestBlogPosts}
+      />
+      <Heading level={2}>About</Heading>
       <p>{siteData.about}</p>
       <p>
         If you'd like to know more, please{' '}
         <a href={`mailto: ${siteData.email}`}>send me an email.</a>
       </p>
+      {/* <h2>CV</h2>
+      <p>Here are some of the places I've worked.</p> */}
     </Layout>
   );
 }
@@ -38,34 +44,23 @@ export const pageQuery = graphql`
         email
       }
     }
-    blogPosts: allSitePage(
-      filter: { context: { type: { eq: "blog" } } }
-      limit: 3
-      sort: { fields: [context___date], order: DESC }
+    blogPosts: allMarkdownRemark(
+      filter: { frontmatter: { path: { regex: "^/blog+/" } } }
+      limit: 5
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
-          id
-          path
-          context {
-            type
+          frontmatter {
             title
-          }
-        }
-      }
-    }
-    workPosts: allSitePage(
-      filter: { context: { type: { eq: "work" } } }
-      limit: 3
-      sort: { fields: [context___display_order], order: ASC }
-    ) {
-      edges {
-        node {
-          id
-          path
-          context {
-            type
-            title
+            path
+            image {
+              childImageSharp {
+                fluid(maxWidth: 340) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

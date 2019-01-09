@@ -3,6 +3,7 @@ title: Creating a style guide with Jekyll
 published: false
 path: '/blog/jekyll-styleguide'
 date: '2016-07-17'
+image: null
 ---
 
 ## Our goals and requirements

@@ -2,10 +2,14 @@
 
 .Billboard {
   font-size: 90px;
-  margin: 20vh 0;
+  margin: 18vh 0;
   font-family: $ridley-font-stack;
   line-height: 1;
   text-align: center;
+
+  @media screen and (max-width: 770px) {
+    font-size: 14vw;
+  }
 }
 
 .Billboard__heading {

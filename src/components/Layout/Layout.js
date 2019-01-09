@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+import './Layout.scss';
+
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
-import './Layout.scss';
 
 const Layout = ({ children, width }) => {
   const wrapperClasses = classNames('PageWrapper', {
@@ -34,7 +34,8 @@ const Layout = ({ children, width }) => {
                 name: 'description',
                 content: data.site.siteMetadata.description,
               },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'keywords', content: data.site.siteMetadata.keywords },
+              { name: 'theme-color', content: '#2196F3' },
             ]}
           >
             <html lang="en" />

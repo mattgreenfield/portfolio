@@ -7,4 +7,25 @@
 .PostFooter__nav {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
+}
+
+.PostFooter__item {
+  margin-bottom: 20px;
+
+  &:first-child {
+    &::before {
+      content: '\02190 ';
+    }
+  }
+
+  &:last-child:not(:only-child) {
+    text-align: right;
+    &::after {
+      content: ' \02192';
+    }
+  }
 }

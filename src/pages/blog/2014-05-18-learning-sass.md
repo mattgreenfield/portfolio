@@ -3,6 +3,7 @@ title: 'Sass'
 excerpt: My thoughts on Sass and how I'm using it in my projects.
 date: '2014-05-18'
 path: '/blog/learning-sass'
+image: null
 ---
 
 Ok, these things have a learning curve but its so worth it.

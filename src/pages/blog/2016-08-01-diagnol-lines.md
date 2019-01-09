@@ -3,6 +3,7 @@ title: The Diagonal Problem
 featured: true
 path: '/blog/diagnol-lines'
 date: '2016-08-01'
+image: '../../images/blog/diagonal.png'
 ---
 
 You may have noticed the diagonal lines in my current site design, I wanted to blog a little bit about them and how I got them to where they are now.

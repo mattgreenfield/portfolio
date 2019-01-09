@@ -2,6 +2,7 @@
 title: Improving page speed in the Create application
 path: '/blog/create-performance'
 date: '2016-10-30'
+image: null
 ---
 
 Working with a 'legacy code base' has it problems, over the last 15 years assets have come and gone, been added to, re-written etc etc. All this has led to a build up of files that are slowing down page load times but that everyone is scared to touch.

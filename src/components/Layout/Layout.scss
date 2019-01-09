@@ -23,6 +23,7 @@
 :root {
   --color-primary: steelblue;
   --color-secondary: #e7790e;
+  --color-secondary-10: #e77b0e4a;
 }
 
 * {
@@ -42,7 +43,13 @@ body {
   padding: 20px;
   line-height: 1.6;
   font-size: 18px;
-  min-height: 80%;
+  min-height: calc(100% - 40px);
+  position: relative;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 770px) {
+    margin: 10px;
+  }
 }
 
 h1,
@@ -60,10 +67,36 @@ h6 {
 a,
 a:visited {
   color: inherit;
+  text-decoration-color: var(--color-secondary);
+}
+
+a:hover {
+  color: #333;
+  background-color: var(--color-secondary-10);
+}
+
+a.plain {
+  color: inherit;
+  text-decoration-color: currentColor;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+::selection {
+  background: var(--color-secondary-10);
+}
+
+pre {
+  background: #333;
+  color: white;
+  padding: 20px;
 }
 
 .PageWrapper {
   margin: 0 auto;
+  display: block;
 }
 
 .PageWrapper--medium {
