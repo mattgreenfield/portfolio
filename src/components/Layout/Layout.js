@@ -35,7 +35,7 @@ const Layout = ({ children, width }) => {
                 content: data.site.siteMetadata.description,
               },
               { name: 'keywords', content: data.site.siteMetadata.keywords },
-              { name: 'theme-color', content: '#2196F3' },
+              { name: 'theme-color', content: '#4682b4' },
             ]}
           >
             <html lang="en" />

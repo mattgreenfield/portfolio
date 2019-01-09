@@ -4,13 +4,19 @@
   position: absolute;
   left: 20px;
   right: 20px;
-  bottom: 15px;
+  bottom: 0;
   align-items: flex-end;
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 
 .Footer__links,
 .Footer__contact {
   margin-left: -20px;
+  margin-bottom: 15px;
 
   a {
     margin-left: 20px;
