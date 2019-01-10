@@ -19,8 +19,8 @@ module.exports = {
         name: 'Matt Greenfield Portfolio',
         short_name: 'M Greenfield',
         start_url: '/',
-        background_color: '#4682b4',
-        theme_color: '#e7790e',
+        background_color: '#e7790e',
+        theme_color: '#4682b4',
         display: 'minimal-ui',
         icon: 'src/images/logo-square.png', // This path is relative to the root of the site.
       },
