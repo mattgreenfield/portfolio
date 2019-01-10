@@ -15,6 +15,8 @@ Gatsby handles all the project set up, routing and optimisations for me.
 I no longer have to worry about making my images responsive and optimizing for screen size, Gatsby lets me get on with making the site my own and writing the content.
 Things like offline usage and service workers are added out of the box with minimum config.
 
+Some frameworks make it so hard to get something to render on the page, that you have no time or motivation left to make it look good and work well. This is not the case with Gatsby, the developer experience is near perfect!
+
 ## Why Netlify
 
 I'd long used github pages to host my site but unfortnatley it doesn't work with Gatsby (although it may be able to serve the compiled code?).
