@@ -1,12 +1,12 @@
 ---
 title: Product Summaries
-link: http://codepen.io/gmattgreenfield/pen/kkoBGX
-image: '../../images/portfolio/product-summaries.jpg'
 path: '/blog/product-summaries'
 date: '2017-01-30'
 ---
 
 Working at Create.net, we often have to build new templates using existing markup - it keeps maintenance to a minimum and ensures sites don't get left behind. One afternoon I decided to see how far I could take this 'product summary' pattern, creating three different styles using the same markup.
+
+<img src="../../images/blog/product-summaries.png">
 
 As you will see, I've placed elements in drastically different layouts and positions using nothing other than CSS.
 

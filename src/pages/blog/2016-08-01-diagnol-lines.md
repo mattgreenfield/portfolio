@@ -20,6 +20,8 @@ Circles have of course become more and more popular on the web (when was the las
 
 I wanted diagonal stripes of colour, that scale across differing device widths and don't litter the markup with empty elements.
 
+<img src="../../images/blog/portfolio.png">
+
 ## The failed attempts
 
 ### Attempt 1
