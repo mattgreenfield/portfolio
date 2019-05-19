@@ -8,46 +8,63 @@ import './Layout.scss';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import ThemePicker from '../ThemePicker/ThemePicker';
 
-const Layout = ({ children, width }) => {
-  const wrapperClasses = classNames('PageWrapper', {
-    [`PageWrapper--${width}`]: true,
-  });
-  return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-              description
+class Layout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: 'default',
+    };
+
+    this.onThemeChange = this.onThemeChange.bind(this);
+  }
+  onThemeChange(theme) {
+    this.setState({ theme: theme });
+  }
+  render() {
+    const { children, width } = this.props;
+    const { theme } = this.state;
+    const wrapperClasses = classNames('PageWrapper', {
+      [`PageWrapper--${width}`]: true,
+    });
+    return (
+      <StaticQuery
+        query={graphql`
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+                description
+              }
             }
           }
-        }
-      `}
-      render={data => (
-        <>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              {
-                name: 'description',
-                content: data.site.siteMetadata.description,
-              },
-              { name: 'keywords', content: data.site.siteMetadata.keywords },
-              { name: 'theme-color', content: '#4682b4' },
-            ]}
-          >
-            <html lang="en" />
-          </Helmet>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <div className={wrapperClasses}>{children}</div>
-          <Footer />
-        </>
-      )}
-    />
-  );
-};
+        `}
+        render={data => (
+          <>
+            <Helmet
+              title={data.site.siteMetadata.title}
+              meta={[
+                {
+                  name: 'description',
+                  content: data.site.siteMetadata.description,
+                },
+                { name: 'keywords', content: data.site.siteMetadata.keywords },
+                { name: 'theme-color', content: '#4682b4' },
+              ]}
+            >
+              <html lang="en" className={`theme theme--${theme}`} />
+            </Helmet>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <ThemePicker onThemeChange={this.onThemeChange} theme={theme} />
+            <div className={wrapperClasses}>{children}</div>
+            <Footer />
+          </>
+        )}
+      />
+    );
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
