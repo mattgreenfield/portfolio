@@ -5,14 +5,38 @@
 }
 
 .ThemePicker__toggle {
-  border: 0;
-  background: none;
   font-size: 32px;
-  padding: 0;
+  border-radius: 1em;
+  display: flex;
+  width: 36px;
+  transition: width 0.2s ease-in-out, background-color 0.2s ease-in,
+    color 0.1s 0.1s ease-in;
+  position: relative;
+  color: transparent;
 
   svg {
     display: block;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    color: var(--color-text);
   }
+
+  &:hover {
+    width: 175px;
+    background-color: var(--color-text);
+    color: white;
+
+    svg {
+      color: currentColor;
+    }
+  }
+}
+
+.ThemePicker__toggle__text {
+  font-size: 16px;
+  margin: 10px 20px;
+  white-space: nowrap;
 }
 
 .ThemePicker__picker {

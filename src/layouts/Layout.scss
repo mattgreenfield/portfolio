@@ -21,11 +21,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
+  --color-text: #191919;
   --color-primary: steelblue;
   --color-secondary: #e7790e;
-  --color-secondary-10: #e77b0e4a;
   --gradient-start: var(--color-primary);
   --gradient-end: var(--color-primary);
+  --gradient-angle: 60deg;
 }
 
 * {
@@ -41,6 +42,7 @@ body {
   margin: 10px;
   font-family: 'Roboto', 'Arial', sans-serif;
   background-color: white;
+  color: var(--color-text);
   padding: 25px;
   line-height: 1.6;
   font-size: 18px;
@@ -79,7 +81,7 @@ a {
 
 a:hover {
   color: #333;
-  background-color: var(--color-secondary-10);
+  --color-secondary: grey;
 }
 
 a.plain {
@@ -92,8 +94,16 @@ a.plain {
   }
 }
 
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+}
+
 ::selection {
-  background: var(--color-secondary-10);
+  background: var(--color-secondary);
+  color: white;
 }
 
 pre {
@@ -122,7 +132,7 @@ pre {
   background-color: var(--gradient-start);
   background-attachment: fixed;
   background-image: linear-gradient(
-    60deg,
+    var(--gradient-angle),
     transparent 0%,
     var(--gradient-end) 100%
   );
@@ -138,6 +148,30 @@ pre {
   --color-secondary: #d53369;
   --gradient-start: #d53369;
   --gradient-end: #daae51;
+
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0%,
+    transparent 50%,
+    var(--gradient-end) 50%,
+    var(--gradient-end) 100%
+  );
+}
+
+.theme--fugio {
+  --color-secondary: #143b58;
+  --gradient-start: var(--color-secondary);
+  --gradient-end: #c79041;
+
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 25%,
+    var(--gradient-end) 25%,
+    var(--gradient-end) 40%,
+    #e8e8e8 40%,
+    #e8e8e8 100%
+  );
 }
 
 .theme--yellow {

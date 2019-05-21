@@ -1,6 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
-import { Manager, Reference, Popper } from 'react-popper';
 import { MdInvertColors } from 'react-icons/md';
 
 import './ThemePicker.scss';
@@ -10,19 +8,14 @@ class ThemePicker extends React.Component {
     super(props);
     this.state = {
       open: false,
-      options: ['default', 'red', 'pink', 'yellow', 'build'],
+      options: ['default', 'red', 'pink', 'yellow', 'fugio', 'build'],
     };
 
-    this.onThemeChange = this.onThemeChange.bind(this);
     this.pickRandom = this.pickRandom.bind(this);
   }
 
   togglePicker() {
     this.setState({ open: !this.state.open });
-  }
-
-  onThemeChange(e) {
-    this.props.onThemeChange(e.target.value);
   }
 
   pickRandom() {
@@ -40,67 +33,17 @@ class ThemePicker extends React.Component {
   }
 
   render() {
-    const { theme } = this.props;
-    const { options } = this.state;
     return (
       <aside className="ThemePicker">
-        <Manager>
-          <Reference>
-            {({ ref }) => (
-              <button
-                type="button"
-                ref={ref}
-                onClick={() => this.togglePicker()}
-                aria-label="Change theme"
-                className="ThemePicker__toggle"
-              >
-                {/* <span>Change theme</span> */}
-                <MdInvertColors />
-              </button>
-            )}
-          </Reference>
-          <Popper placement="right">
-            {({ ref, style, placement, arrowProps }) =>
-              this.state.open && (
-                <div
-                  ref={ref}
-                  className="ThemePicker__picker"
-                  data-placement={placement}
-                >
-                  <h2>Pick a theme</h2>
-                  <fieldset>
-                    <div
-                      className="ThemePicker__options"
-                      onChange={this.onThemeChange}
-                    >
-                      {options.map(color => (
-                        <input
-                          className={classNames(
-                            'theme',
-                            'ThemePicker__swatch',
-                            {
-                              [`theme--${color}`]: true,
-                              'ThemePicker__swatch--current': color === theme,
-                            }
-                          )}
-                          type="radio"
-                          name="theme"
-                          value={color}
-                          aria-label={color}
-                          key={color}
-                        />
-                      ))}
-                    </div>
-                  </fieldset>
-                  <button type="button" onClick={this.pickRandom}>
-                    Feeling Lucky?
-                  </button>
-                  <div ref={arrowProps.ref} style={arrowProps.style} />
-                </div>
-              )
-            }
-          </Popper>
-        </Manager>
+        <button
+          type="button"
+          onClick={this.pickRandom}
+          aria-label="Change theme"
+          className="ThemePicker__toggle"
+        >
+          <span className="ThemePicker__toggle__text">Change Theme</span>
+          <MdInvertColors />
+        </button>
       </aside>
     );
   }
