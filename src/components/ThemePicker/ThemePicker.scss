@@ -4,25 +4,53 @@
   right: 10px;
 }
 
+.ThemePicker__toggle {
+  border: 0;
+  background: none;
+  font-size: 32px;
+  padding: 0;
+
+  svg {
+    display: block;
+  }
+}
+
 .ThemePicker__picker {
   background-color: white;
-  border: 1px solid black;
-  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 15px;
   position: absolute;
   width: 280px;
 
   &[data-placement='left'] {
     right: 0;
   }
+
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+.ThemePicker__options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
 }
 
 .ThemePicker__swatch {
   border-radius: 4px;
-  padding: 30px;
   appearance: none;
-  border: 2px solid transparent;
+  border: 2px solid grey;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  background-attachment: unset;
 }
 
 .ThemePicker__swatch--current {
-  border-color: red;
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--color-primary);
 }

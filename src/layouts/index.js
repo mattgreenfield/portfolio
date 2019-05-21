@@ -6,9 +6,9 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import './Layout.scss';
 
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import ThemePicker from '../ThemePicker/ThemePicker';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import ThemePicker from 'components/ThemePicker/ThemePicker';
 
 class Layout extends React.Component {
   constructor(props) {

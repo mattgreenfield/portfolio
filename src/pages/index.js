@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout/Layout';
 import Billboard from '../components/Billboard/Billboard';
 import PostList from '../components/PostList/PostList';
 import Heading from '../components/Heading/Heading';
@@ -11,7 +10,7 @@ export default function IndexPage({ data }) {
   const siteData = data.siteData.siteMetadata;
 
   return (
-    <Layout>
+    <>
       <Billboard
         heading={siteData.title}
         subHeading={siteData.job_description}
@@ -30,7 +29,7 @@ export default function IndexPage({ data }) {
       </p>
       {/* <h2>CV</h2>
       <p>Here are some of the places I've worked.</p> */}
-    </Layout>
+    </>
   );
 }
 

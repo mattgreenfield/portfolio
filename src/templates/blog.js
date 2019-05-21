@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout/Layout';
 import PostHeader from '../components/Post/PostHeader/PostHeader';
 import PostFooter from '../components/Post/PostFooter/PostFooter';
 
@@ -19,7 +18,7 @@ class Blog extends React.Component {
     const { prev, next } = pageContext;
 
     return (
-      <Layout width="medium">
+      <>
         <article>
           <PostHeader
             title={frontmatter.title}
@@ -34,7 +33,7 @@ class Blog extends React.Component {
           </main>
           <PostFooter prev={prev} next={next} />
         </article>
-      </Layout>
+      </>
     );
   }
 }

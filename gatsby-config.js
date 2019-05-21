@@ -13,6 +13,8 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-layout`,
+    'gatsby-plugin-resolve-src',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
