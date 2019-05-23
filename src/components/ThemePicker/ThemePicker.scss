@@ -23,7 +23,8 @@
     top: 3px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-text);
     color: white;
     width: 175px;
