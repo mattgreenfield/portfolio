@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { DiGithubBadge } from 'react-icons/di';
+import { MdEmail } from 'react-icons/md';
+import { IoLogoTwitter } from 'react-icons/io';
 
 import './Footer.scss';
 
@@ -8,6 +11,7 @@ const Footer = () => (
     <nav className="Footer__links">
       <Link to="/">Home</Link>
       <Link to="/blog">Blog</Link>
+      <Link to="/theme-switcher">Theme Switcher</Link>
     </nav>
     <div className="Footer__contact">
       <a
@@ -15,41 +19,21 @@ const Footer = () => (
         href="https://github.com/mattgreenfield"
         aria-label="Github"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-          <path
-            d="M512 0C229.12 0 0 229.12 0 512c0 226.56 146.56 417.92 350.08 485.76 25.6 4.48 35.2-10.88 35.2-24.32 0-12.16-.64-52.48-.64-95.36-128.64 23.68-161.92-31.36-172.16-60.16-5.76-14.72-30.72-60.16-52.48-72.32-17.92-9.6-43.52-33.28-.64-33.92 40.32-.64 69.12 37.12 78.72 52.48 46.08 77.44 119.68 55.68 149.12 42.24 4.48-33.28 17.92-55.68 32.64-68.48-113.92-12.8-232.96-56.96-232.96-252.8 0-55.68 19.84-101.76 52.48-137.6-5.12-12.8-23.04-65.28 5.12-135.68 0 0 42.88-13.44 140.8 52.48 40.96-11.52 84.48-17.28 128-17.28 43.52 0 87.04 5.76 128 17.28 97.92-66.56 140.8-52.48 140.8-52.48 28.16 70.4 10.24 122.88 5.12 135.68 32.64 35.84 52.48 81.28 52.48 137.6 0 196.48-119.68 240-233.6 252.8 18.56 16 34.56 46.72 34.56 94.72 0 68.48-.64 123.52-.64 140.8 0 13.44 9.6 29.44 35.2 24.32C877.44 929.92 1024 737.92 1024 512 1024 229.12 794.88 0 512 0z"
-            fill="currentColor"
-          />
-        </svg>
+        <DiGithubBadge />
       </a>
       <a
         className="Footer__icon"
         href="https://twitter.com/mattgreenfield2"
         aria-label="Twitter"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path
-            fill="currentColor"
-            d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.864 9.864 0 0 1-3.127 1.195 4.916 4.916 0 0 0-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 3.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 4.557z"
-          />
-        </svg>
+        <IoLogoTwitter />
       </a>
       <a
         className="Footer__icon"
         href="mailto:gmattgreenfield@gmail.com"
         aria-label="Email"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"
-          />
-        </svg>
+        <MdEmail />
       </a>
     </div>
   </footer>
