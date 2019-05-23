@@ -8,7 +8,6 @@ class ThemePicker extends React.Component {
     super(props);
     this.state = {
       open: false,
-      options: ['default', 'red', 'pink', 'yellow', 'fugio', 'build'],
     };
 
     this.pickRandom = this.pickRandom.bind(this);
@@ -20,7 +19,7 @@ class ThemePicker extends React.Component {
 
   pickRandom() {
     const { theme } = this.props;
-    const options = [...this.state.options];
+    const options = [...this.props.availableThemes];
 
     // Ensure the random selection is not the same as the current theme by removing it
     var currentThemeIndex = options.indexOf(theme);

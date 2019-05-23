@@ -36,31 +36,48 @@ class Layout extends React.Component {
               siteMetadata {
                 title
                 description
+                keywords
+                availableThemes
               }
             }
           }
         `}
-        render={data => (
-          <>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              meta={[
-                {
-                  name: 'description',
-                  content: data.site.siteMetadata.description,
-                },
-                { name: 'keywords', content: data.site.siteMetadata.keywords },
-                { name: 'theme-color', content: '#4682b4' },
-              ]}
-            >
-              <html lang="en" className={`theme theme--${theme}`} />
-            </Helmet>
-            <Header siteTitle={data.site.siteMetadata.title} />
-            <ThemePicker onThemeChange={this.onThemeChange} theme={theme} />
-            <div className={wrapperClasses}>{children}</div>
-            <Footer />
-          </>
-        )}
+        render={data => {
+          const {
+            title,
+            description,
+            keywords,
+            availableThemes,
+          } = data.site.siteMetadata;
+          return (
+            <>
+              <Helmet
+                title={title}
+                meta={[
+                  {
+                    name: 'description',
+                    content: description,
+                  },
+                  {
+                    name: 'keywords',
+                    content: keywords,
+                  },
+                  { name: 'theme-color', content: '#4682b4' },
+                ]}
+              >
+                <html lang="en" className={`theme theme--${theme}`} />
+              </Helmet>
+              <Header siteTitle={title} />
+              <ThemePicker
+                onThemeChange={this.onThemeChange}
+                theme={theme}
+                availableThemes={availableThemes}
+              />
+              <div className={wrapperClasses}>{children}</div>
+              <Footer />
+            </>
+          );
+        }}
       />
     );
   }

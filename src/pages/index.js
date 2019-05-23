@@ -7,14 +7,11 @@ import Heading from '../components/Heading/Heading';
 
 export default function IndexPage({ data }) {
   const latestBlogPosts = data.blogPosts.edges;
-  const siteData = data.siteData.siteMetadata;
+  const { title, job_description, about, email } = data.siteData.siteMetadata;
 
   return (
     <>
-      <Billboard
-        heading={siteData.title}
-        subHeading={siteData.job_description}
-      />
+      <Billboard heading={title} subHeading={job_description} />
       <PostList
         title="Blog"
         to="/blog"
@@ -22,10 +19,10 @@ export default function IndexPage({ data }) {
         items={latestBlogPosts}
       />
       <Heading level={2}>About</Heading>
-      <p>{siteData.about}</p>
+      <p>{about}</p>
       <p>
         If you'd like to know more, please{' '}
-        <a href={`mailto: ${siteData.email}`}>send me an email.</a>
+        <a href={`mailto: ${email}`}>send me an email.</a>
       </p>
       {/* <h2>CV</h2>
       <p>Here are some of the places I've worked.</p> */}
