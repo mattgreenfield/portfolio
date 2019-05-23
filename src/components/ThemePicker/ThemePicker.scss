@@ -1,31 +1,32 @@
 .ThemePicker {
   position: absolute;
-  top: 10px;
   right: 10px;
+  top: 10px;
 }
 
 .ThemePicker__toggle {
-  font-size: 32px;
   border-radius: 1em;
+  color: transparent;
   display: flex;
-  width: 36px;
+  font-size: 32px;
+  overflow: hidden;
+  position: relative;
   transition: width 0.2s ease-in-out, background-color 0.2s ease-in,
     color 0.1s 0.1s ease-in;
-  position: relative;
-  color: transparent;
+  width: 36px;
 
   svg {
+    color: var(--color-text);
     display: block;
     position: absolute;
     right: 3px;
     top: 3px;
-    color: var(--color-text);
   }
 
   &:hover {
-    width: 175px;
     background-color: var(--color-text);
     color: white;
+    width: 175px;
 
     svg {
       color: currentColor;
@@ -52,29 +53,29 @@
   }
 
   fieldset {
-    padding: 0;
-    margin: 0;
     border: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .ThemePicker__options {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .ThemePicker__swatch {
-  border-radius: 4px;
   appearance: none;
+  background-attachment: unset;
   border: 2px solid grey;
-  width: 100%;
+  border-radius: 4px;
   height: 30px;
   margin: 0;
-  background-attachment: unset;
+  width: 100%;
 }
 
 .ThemePicker__swatch--current {
-  outline: 0;
   box-shadow: 0 0 0 2px var(--color-primary);
+  outline: 0;
 }
