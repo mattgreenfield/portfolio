@@ -15,21 +15,21 @@ const Footer = () => (
     </nav>
     <div className="Footer__contact">
       <a
-        className="Footer__icon"
+        className="Footer__icon plain-link"
         href="https://github.com/mattgreenfield"
         aria-label="Github"
       >
         <DiGithubBadge />
       </a>
       <a
-        className="Footer__icon"
+        className="Footer__icon plain-link"
         href="https://twitter.com/mattgreenfield2"
         aria-label="Twitter"
       >
         <IoLogoTwitter />
       </a>
       <a
-        className="Footer__icon"
+        className="Footer__icon plain-link"
         href="mailto:gmattgreenfield@gmail.com"
         aria-label="Email"
       >

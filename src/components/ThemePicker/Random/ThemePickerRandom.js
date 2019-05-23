@@ -1,21 +1,21 @@
 import React from 'react';
 import { MdInvertColors } from 'react-icons/md';
 
-import './ThemePicker.scss';
+import './ThemePickerRandom.scss';
 
-class ThemePicker extends React.Component {
+class ThemePickerRandom extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
+      // open: false,
     };
 
     this.pickRandom = this.pickRandom.bind(this);
   }
 
-  togglePicker() {
-    this.setState({ open: !this.state.open });
-  }
+  // togglePicker() {
+  //   this.setState({ open: !this.state.open });
+  // }
 
   pickRandom() {
     const { theme } = this.props;
@@ -48,4 +48,4 @@ class ThemePicker extends React.Component {
   }
 }
 
-export default ThemePicker;
+export default ThemePickerRandom;

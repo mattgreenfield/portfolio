@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 import './Heading.scss';
 
 const Heading = ({ children, level }) => {
-  const classes = classNames('Heading', {
-    [`Heading--${level}`]: true,
-  });
+  const classes = classNames('Heading', [`Heading--${level}`]);
 
   const Element = `h${level}`;
 

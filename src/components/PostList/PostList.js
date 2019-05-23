@@ -15,7 +15,7 @@ export default function PostList({ title, to, items, headingLevel }) {
             const item = node.frontmatter;
             return (
               <li key={item.path}>
-                <Link to={item.path} className="PostList__item plain">
+                <Link to={item.path} className="PostList__item plain-link">
                   {item.title}
                 </Link>
               </li>

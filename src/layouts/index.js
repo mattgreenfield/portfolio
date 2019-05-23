@@ -8,7 +8,7 @@ import './Layout.scss';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
-import ThemePicker from 'components/ThemePicker/ThemePicker';
+import ThemePickerRandom from 'components/ThemePicker/Random/ThemePickerRandom';
 
 class Layout extends React.Component {
   constructor(props) {
@@ -68,12 +68,17 @@ class Layout extends React.Component {
                 <html lang="en" className={`theme theme--${theme}`} />
               </Helmet>
               <Header siteTitle={title} />
-              <ThemePicker
+              <ThemePickerRandom
                 onThemeChange={this.onThemeChange}
                 theme={theme}
                 availableThemes={availableThemes}
               />
-              <div className={wrapperClasses}>{children}</div>
+              <div className={wrapperClasses}>
+                {React.cloneElement(children, {
+                  onThemeChange: this.onThemeChange,
+                  currentTheme: theme,
+                })}
+              </div>
               <Footer />
             </>
           );
