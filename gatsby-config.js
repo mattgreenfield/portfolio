@@ -7,7 +7,15 @@ module.exports = {
     about:
       "Hello. I'm Matt, a frontend developer from Brighton, UK (I make websites). I spend my days writing CSS and JavaScript with some Sass and React on top. I'm passionate about making websites for all people on all devices.",
     email: 'gmattgreenfield@gmail.com',
-    availableThemes: ['default', 'red', 'pink', 'yellow', 'fugio', 'build'],
+    availableThemes: [
+      'default',
+      'red',
+      'pink',
+      'yellow',
+      'fugio',
+      'build',
+      'beach',
+    ],
   },
   plugins: [
     'gatsby-transformer-sharp',

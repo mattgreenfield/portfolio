@@ -189,6 +189,22 @@ pre {
   --gradient-end: #ffd1ff;
 }
 
+.theme--beach {
+  --color-secondary: #edb013;
+  --gradient-start: #146887;
+  --gradient-end: #edb013;
+
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 25%,
+    var(--gradient-end) 25%,
+    var(--gradient-end) 80%,
+    #e8e8e8 80%,
+    #e8e8e8 100%
+  );
+}
+
 .theme--build {
   --color-secondary: yellow;
   --gradient-start: yellow;
