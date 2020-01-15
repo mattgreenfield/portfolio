@@ -51,12 +51,11 @@ body {
   padding: 25px;
   line-height: 1.6;
   font-size: 18px;
-  min-height: calc(100% - 40px);
+  min-height: calc(100% - 20px);
   position: relative;
   padding-bottom: 100px;
 
   @media screen and (max-width: 770px) {
-    margin: 10px;
     padding-bottom: 150px;
   }
 }
