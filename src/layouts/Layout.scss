@@ -34,6 +34,11 @@
   margin-top: 0;
 }
 
+%focus {
+  box-shadow: 0 0 0 2px cornflowerblue, 0 0 0px 6px rgba(cornflowerblue, 0.3);
+  outline: none;
+}
+
 html {
   height: 100%;
 }
@@ -70,19 +75,24 @@ h6 {
 }
 
 a {
-  &,
-  a:visited {
-    color: inherit;
-  }
-
   text-decoration-color: var(--color-secondary);
   box-shadow: inset 0px -0.15em 0px white,
     inset 0 -0.35em 0 var(--color-secondary);
-}
 
-a:hover {
-  color: #333;
-  --color-secondary: grey;
+  &,
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: #333;
+    --color-secondary: grey;
+  }
+
+  &:focus {
+    border-radius: 6px;
+    @extend %focus;
+  }
 }
 
 .plain-link {
@@ -102,6 +112,10 @@ button {
   font-family: inherit;
   color: inherit;
   font-size: inherit;
+
+  &:focus {
+    @extend %focus;
+  }
 }
 
 ::selection {
