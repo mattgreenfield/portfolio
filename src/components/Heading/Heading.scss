@@ -8,3 +8,12 @@
 .Heading--2 {
   font-size: 2.4em;
 }
+
+.heading-group {
+  margin-bottom: 10px;
+
+  .Heading {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+}

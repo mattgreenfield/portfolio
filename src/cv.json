@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Stratum Five",
+    "dates": {
+      "start": "January 2019",
+      "end": "current"
+    },
+    "description": "Working as both designer and developer to visualise large data sets from the shipping industry in engaging and meaningful ways as well as letting users create and edit thier own dashboards of data.",
+    "tags": [
+      "Vue",
+      "Typescript",
+      "CSS",
+      "Sass",
+      "Cypress",
+      "Jest",
+      "Canvas",
+      "Leaflet",
+      "ChartJs"
+    ]
+  },
+  {
+    "name": "Simpplr",
+    "dates": {
+      "start": "December 2017",
+      "end": "December 2018"
+    },
+    "description": "Building a white label intranet",
+    "tags": [
+      "React",
+      "GraphQL",
+      "CSS Modules",
+      "Sass",
+      "React Native",
+      "Agile",
+      "HTML Email"
+    ]
+  },
+  {
+    "name": "Gene",
+    "dates": {
+      "start": "March 2017",
+      "end": "December 2017"
+    },
+    "description": "Magento ecommerce agency",
+    "tags": ["PHP", "Magento", "Sass", "HTML"]
+  },
+  {
+    "name": "Create",
+    "dates": {
+      "start": "April 2014",
+      "end": "February 2017"
+    },
+    "description": "Ecommerce software as a service",
+    "tags": ["PHP", "Sass", "HTML"]
+  }
+]

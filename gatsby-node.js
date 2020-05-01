@@ -13,9 +13,12 @@ exports.createPages = ({ actions, graphql }) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blog.js`);
 
-  return graphql(`
+  graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { frontmatter: { path: { regex: "/blog/" } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -47,5 +50,14 @@ exports.createPages = ({ actions, graphql }) => {
         },
       });
     });
+  });
+
+  const CVData = require('./src/cv.json');
+  createPage({
+    path: `/cv/`,
+    component: require.resolve('./src/templates/cv.js'),
+    context: {
+      items: CVData,
+    },
   });
 };
