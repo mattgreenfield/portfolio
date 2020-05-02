@@ -5,8 +5,12 @@
   cursor: pointer;
   display: block;
   height: 0;
-  padding-bottom: 100%;
+  padding-bottom: 70%;
   width: 100%;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .ThemePickerSwatch--active {

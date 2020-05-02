@@ -28,5 +28,5 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   isList: true,
-  columns: 'repeat(auto-fill, 80px)',
+  columns: 'repeat(auto-fit, minmax(100px, 1fr))',
 };
