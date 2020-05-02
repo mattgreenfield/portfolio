@@ -262,6 +262,16 @@ code {
 }
 
 .theme--dark {
+  --color-page-bg: #232323;
+  --color-text: #f3f3f3;
+  --color-text-light: white;
+  --gradient-start: #607d8b;
+  --gradient-end: #607d8b;
+  --color-primary: #607d8b;
+  --color-secondary: #a04242;
+}
+
+.theme--franz {
   --color-page-bg: #292929;
   --color-text: #f9f8e6;
   --color-text-light: #f9f8e6;

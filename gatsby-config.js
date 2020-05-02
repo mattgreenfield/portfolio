@@ -15,6 +15,7 @@ module.exports = {
       'fugio',
       'beach',
       'dark',
+      'franz',
       'build',
     ],
   },
