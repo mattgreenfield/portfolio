@@ -1,4 +1,7 @@
+@import '../../variables.scss';
+
 .Footer {
+  font-family: $ridley-font-stack;
   display: flex;
   justify-content: space-between;
   position: absolute;

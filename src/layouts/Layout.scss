@@ -2,12 +2,6 @@
 
 @font-face {
   font-family: 'Ridley';
-  src: url('../fonts/ridleygrotesk-bold.woff2') format('woff2');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Ridley';
   src: url('../fonts/ridleygrotesk-light.ttf') format('truetype');
   font-weight: 300;
 }
@@ -18,10 +12,21 @@
   font-weight: 400;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: 'Ridley';
+  font-weight: 500;
+  src: url('../fonts/ridleygrotesk-semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ridley';
+  font-weight: 700;
+  src: url('../fonts/ridleygrotesk-bold.woff2') format('woff2');
+}
 
 :root {
   --color-text: #191919;
+  --color-text-light: #5a5a5a;
   --color-primary: steelblue;
   --color-secondary: #e7790e;
   --gradient-start: var(--color-primary);
@@ -45,7 +50,7 @@ html {
 
 body {
   margin: 10px;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: white;
   color: var(--color-text);
   padding: 25px;

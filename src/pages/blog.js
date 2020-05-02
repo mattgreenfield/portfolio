@@ -23,6 +23,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            date(formatString: "MMMM Do, YYYY")
             path
             image {
               childImageSharp {

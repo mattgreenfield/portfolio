@@ -12,20 +12,13 @@ export default function IndexPage({ data }) {
   return (
     <>
       <Billboard heading={title} subHeading={job_description} />
+      <p>{about}</p>
       <PostList
         title="Blog"
         to="/blog"
         headingLevel={2}
         items={latestBlogPosts}
       />
-      <Heading level={2}>About</Heading>
-      <p>{about}</p>
-      <p>
-        If you'd like to know more, please{' '}
-        <a href={`mailto: ${email}`}>send me an email.</a>
-      </p>
-      {/* <h2>CV</h2>
-      <p>Here are some of the places I've worked.</p> */}
     </>
   );
 }
@@ -49,6 +42,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            date(formatString: "MMMM Do, YYYY")
             path
             image {
               childImageSharp {

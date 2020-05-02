@@ -12,11 +12,19 @@
 
 .PostList__item {
   margin-bottom: 0.4em;
-  font-size: 1.9em;
   display: inline-block;
+  text-decoration: none;
 
-  @media screen and (max-width: 770px) {
-    font-size: 1.2em;
+  &:hover .Heading {
+    text-decoration: underline;
+  }
+
+  .Heading {
+    margin-bottom: 0;
+  }
+
+  span {
+    color: var(--color-text-light);
   }
 }
 

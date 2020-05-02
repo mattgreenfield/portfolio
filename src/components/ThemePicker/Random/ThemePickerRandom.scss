@@ -1,4 +1,7 @@
+@import '../../../variables.scss';
+
 .ThemePicker {
+  font-family: $ridley-font-stack;
   position: absolute;
   right: 10px;
   top: 10px;
@@ -28,7 +31,7 @@
   &:focus {
     background-color: var(--color-text);
     color: white;
-    width: 175px;
+    width: 185px;
 
     svg {
       color: currentColor;
