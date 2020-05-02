@@ -30,7 +30,7 @@
   &:hover,
   &:focus {
     background-color: var(--color-text);
-    color: white;
+    color: var(--color-page-bg);
     width: 185px;
 
     svg {
@@ -87,8 +87,8 @@
 
 .ThemePicker__popup {
   background-color: var(--color-text);
+  color: var(--color-page-bg);
   border-radius: 4px;
-  color: white;
   margin-top: 10px;
   padding: 5px 10px;
   position: absolute;

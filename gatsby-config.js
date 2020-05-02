@@ -13,8 +13,9 @@ module.exports = {
       'pink',
       'yellow',
       'fugio',
-      'build',
       'beach',
+      'dark',
+      'build',
     ],
   },
   plugins: [

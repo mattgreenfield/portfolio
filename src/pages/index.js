@@ -3,16 +3,15 @@ import { graphql } from 'gatsby';
 
 import Billboard from '../components/Billboard/Billboard';
 import PostList from '../components/PostList/PostList';
-import Heading from '../components/Heading/Heading';
 
 export default function IndexPage({ data }) {
   const latestBlogPosts = data.blogPosts.edges;
-  const { title, job_description, about, email } = data.siteData.siteMetadata;
+  const { title, job_description, about } = data.siteData.siteMetadata;
 
   return (
     <>
       <Billboard heading={title} subHeading={job_description} />
-      <p>{about}</p>
+      <p className="mb-6">{about}</p>
       <PostList
         title="Blog"
         to="/blog"
