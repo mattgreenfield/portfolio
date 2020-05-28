@@ -13,6 +13,7 @@ const Footer = () => (
       <Link to="/blog">Blog</Link>
       <Link to="/theme-switcher">Theme Switcher</Link>
       <Link to="/cv">CV</Link>
+      {/* <Link to="/contact">Contact</Link> */}
     </nav>
     <div className="Footer__contact">
       <a
