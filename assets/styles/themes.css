@@ -1,0 +1,111 @@
+/* Themes */
+.theme {
+  transition: background-color 0.2s ease-in;
+  background-color: var(--gradient-start);
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    var(--gradient-angle),
+    transparent 0%,
+    var(--gradient-end) 100%
+  );
+}
+
+.theme--default,
+.theme--blue {
+  --gradient-start: var(--color-primary);
+  --gradient-end: var(--color-primary);
+}
+
+@media screen {
+  .theme--red {
+    --color-secondary: #d53369;
+    --gradient-start: #d53369;
+    --gradient-end: #daae51;
+
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 50%,
+      var(--gradient-end) 50%,
+      var(--gradient-end) 100%
+    );
+  }
+
+  .theme--fugio {
+    --color-secondary: #143b58;
+    --gradient-start: var(--color-secondary);
+    --gradient-end: #c79041;
+    --color-page-bg: #fdfdfd;
+
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 25%,
+      var(--gradient-end) 25%,
+      var(--gradient-end) 40%,
+      #e8e8e8 40%,
+      #e8e8e8 100%
+    );
+  }
+
+  .theme--yellow {
+    --color-secondary: #fdbb2d;
+    --gradient-start: #fdbb2d;
+    --gradient-end: #22c1c3;
+    --color-page-bg: #f9f8e6;
+  }
+
+  .theme--pink {
+    --color-secondary: #ffd1ff;
+    --gradient-start: #fad0c4;
+    --gradient-end: #ffd1ff;
+  }
+
+  .theme--beach {
+    --color-secondary: #edb013;
+    --gradient-start: #146887;
+    --gradient-end: #edb013;
+
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 25%,
+      var(--gradient-end) 25%,
+      var(--gradient-end) 80%,
+      #e8e8e8 80%,
+      #e8e8e8 100%
+    );
+  }
+
+  .theme--build {
+    --color-secondary: yellow;
+    --gradient-start: yellow;
+    --gradient-end: black;
+
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 20px,
+      var(--gradient-end) 20px,
+      var(--gradient-end) 40px
+    );
+  }
+
+  .theme--dark {
+    --color-page-bg: #232323;
+    --color-text: #f3f3f3;
+    --color-text-light: white;
+    --gradient-start: #607d8b;
+    --gradient-end: #607d8b;
+    --color-primary: #607d8b;
+    --color-secondary: #a04242;
+  }
+
+  .theme--franz {
+    --color-page-bg: #292929;
+    --color-text: #f9f8e6;
+    --color-text-light: #f9f8e6;
+    --gradient-start: #403f3f;
+    --gradient-end: #403f3f;
+  }
+}

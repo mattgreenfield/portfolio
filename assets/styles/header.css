@@ -1,6 +1,7 @@
 .Header {
   display: flex;
   margin-bottom: 40px;
+  @apply print:mb-2;
 }
 
 .Header__logo {

@@ -1,0 +1,13 @@
+.card {
+  @apply border-gray-200 rounded-2xl p-6 border bg-white text-gray-800;
+  @apply print:border-none print:p-0 print:rounded-none;
+
+  /* img {
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    position: relative;
+    bottom: -18px;
+    right: -18px;
+    width: 30%;
+    margin-left: auto;
+  } */
+}

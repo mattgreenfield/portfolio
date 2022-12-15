@@ -1,0 +1,109 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: var(--color-page-bg);
+  color: var(--color-text);
+  padding: 25px;
+  line-height: 1.6;
+  font-size: 18px;
+  min-height: calc(100% - 20px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  transition-property: color background-color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+
+  @apply print:p-4 print:text-base;
+
+  > main {
+    flex-grow: 1;
+  }
+  > footer {
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-sans;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+  margin-top: 1.8em;
+  @apply print:mt-5;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 1.9rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration-color: var(--color-secondary);
+  box-shadow: inset 0px -0.15em 0px white,
+    inset 0 -0.35em 0 var(--color-secondary);
+
+  &,
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: var(--color-text-light);
+  }
+
+  &:focus {
+    border-radius: 6px;
+    @extend %focus;
+  }
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+
+  &:focus {
+    @extend %focus;
+  }
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: white;
+}
+
+code,
+pre {
+  background: #333;
+  color: white;
+}
+
+pre {
+  padding: 20px;
+}
+
+code {
+  padding: 2px;
+}

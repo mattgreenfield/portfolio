@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./font-face.css";
+@import "./variables.css";
+@import "./reset.css";
+@import "./container.css";
+@import "./header.css";
+@import "./card.css";
+@import "./themes.css";
+@import "./theme-picker.css";
+
+blockquote {
+  background: rgb(239 246 255);
+  margin: 0 0 2em;
+  font-size: 16px;
+  color: rgb(29 78 216);
+  padding: 1rem;
+  padding-left: 70px;
+  border-radius: 0.4rem;
+  position: relative;
+  @apply print:hidden;
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "👋";
+    position: absolute;
+    left: 20px;
+    font-size: 2rem;
+  }
+}
+
+/* 
+.plain-link {
+  color: inherit;
+  text-decoration-color: currentColor;
+  box-shadow: none;
+
+  &:hover {
+    color: var(--color-text-light);
+  }
+} */
