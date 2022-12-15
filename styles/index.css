@@ -1,4 +1,5 @@
 /* @import '../variables.scss'; */
+@import "./header.css";
 
 @font-face {
   font-family: "Ridley";

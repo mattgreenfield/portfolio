@@ -9,10 +9,10 @@ title: Matt Greenfield
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
 
-    <!-- capture the CSS content as a Nunjucks variable -->
-    {% set css %} {% include "styles/index.css" %} {% endset %}
-    <!-- feed it through our cssmin filter to minify -->
+    {# <!-- capture the CSS content as a Nunjucks variable --> #}
+    {% set css %} {% include "../_site/styles/index.css" %} {% endset %}
     <style>
+      {# {{ css | cssmin | safe }} #}
       {{ css | cssmin | safe }}
     </style>
   </head>
