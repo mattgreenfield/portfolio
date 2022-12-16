@@ -7,13 +7,14 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: var(--color-page-bg);
   color: var(--color-text);
-  padding: 25px;
+
   line-height: 1.6;
   font-size: 18px;
   min-height: calc(100% - 20px);
   position: relative;
   display: flex;
   flex-direction: column;
+  @apply p-4 sm:p-6;
 
   transition-property: color background-color;
   transition-duration: 0.1s;

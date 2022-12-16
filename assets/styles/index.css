@@ -17,10 +17,9 @@ blockquote {
   font-size: 16px;
   color: rgb(29 78 216);
   padding: 1rem;
-  padding-left: 70px;
   border-radius: 0.4rem;
   position: relative;
-  @apply print:hidden;
+  @apply print:hidden sm:pl-20 pt-16 sm:pt-4;
 
   > * {
     margin-bottom: 0;
@@ -29,8 +28,8 @@ blockquote {
   &::before {
     content: "👋";
     position: absolute;
-    left: 20px;
     font-size: 2rem;
+    @apply top-2.5 sm:top-auto sm:left-6;
   }
 }
 

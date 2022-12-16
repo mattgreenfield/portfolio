@@ -33,7 +33,7 @@ In my spare time, I enjoy playing the drums and running.
         </header>
         <div class="mb-4 max-w-prose">{{ job.templateContent }}</div>
         <footer>
-            <ul class="flex gap-2 leading-none text-sm font-sans">{%- for tech in job.data.tech -%}
+            <ul class="flex flex-wrap gap-2 leading-none text-sm font-sans">{%- for tech in job.data.tech -%}
                 <li class="p-2 bg-gray-100 text-gray-800 rounded print:p-0">{{ tech }}</li>
             {%- endfor -%}</ul>
         </footer>
