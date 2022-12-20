@@ -3,9 +3,9 @@ tags: job
 name: Upzelo
 slug: upzelo
 job: Senior frontend developer
-tech: [Vue3, Laravel, Cypress]
+tech: [Vue 3, Laravel, Cypress, Tailwind], 
 date: 2021-09-00
-end-date: 2022-12-00
+endDate: null
 ---
 
 At Upzelo, I built and maintained all three main areas of the frontend: the admin area, the installable product, and the marketing website.

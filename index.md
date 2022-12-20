@@ -27,7 +27,14 @@ In my spare time, I enjoy playing the drums and running.
              <div class="flex gap-2 items-center mb-2">
                 <img src="./assets/images/{{ job.data.slug }}.png" alt="The {{ job.data.name }} logo" class="w-6 h-6"/>
                 <h3 class="mt-0 mb-0">{{ job.data.name }}</h3>
-                <div class=" text-gray-500 -mt-2 ml-auto">{{ job.date | date }}</div>
+                <div class="text-gray-500 -mt-2 ml-auto">
+                    {{ job.date | date }} -&nbsp;
+                    {%- if job.data.endDate -%}
+                        {{ job.data.endDate | date }}
+                    {%- else -%}
+                        present
+                    {%- endif -%}
+                </div>
             </div>
             <div class="text-base font-sans">{{ job.data.job }}</div>
         </header>

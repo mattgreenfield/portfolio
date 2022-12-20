@@ -4,8 +4,8 @@ name: Teamed
 slug: teamed
 job: Senior frontend developer
 tech: [React, Tailwind, RxJS]
-date: 2020-11-00
-end-date: 2021-09-00
+date: 2020-10-00
+endDate: 2021-09-00
 ---
 
 Teamed is a SAAS platform allowing employers to employ people from around the world.

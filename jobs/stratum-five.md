@@ -4,8 +4,8 @@ name: StratumFive
 slug: s5
 job: Frontend developer
 tech: [Vue, Typescript, VueX, Cypress, CSS, Sass, Canvas, Storybook, ChartJs]
-date: 2019-01-00
-end-date: 2020-11-00
+date: 2018-11-00
+endDate: 2020-11-00
 ---
 
 StratumFive provides software for managing large ships (the type that carries shipping containers). We built multiple products to be used both onshore and at sea (for this we built a PWA that could be used offline).
