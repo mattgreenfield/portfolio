@@ -3,7 +3,7 @@ tags: job
 name: Upzelo
 slug: upzelo
 job: Senior frontend developer
-tech: [Vue 3, Laravel, Cypress, Tailwind], 
+tech: [Vue 3, Laravel, Cypress, Tailwind]
 date: 2021-09-00
 endDate: null
 ---
