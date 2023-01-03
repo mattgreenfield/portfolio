@@ -23,6 +23,7 @@ title: Matt Greenfield
       const newTheme = this.pickRandomTheme();
       if (newTheme) {
         this.theme = newTheme;
+        localStorage.setItem('theme', newTheme)
       }
     },
     pickRandomTheme() {
@@ -35,6 +36,10 @@ title: Matt Greenfield
       }
       return this.themes[newIndex];
     },
+    init() {
+      const theme = localStorage.getItem('theme');
+      if (theme) { this.theme = theme; }
+    }
   }"
   x-bind:class="{ [`theme--${theme}`]: true }"
 >
@@ -105,7 +110,7 @@ title: Matt Greenfield
           </button>
         </aside>
       </header>
-      <main class="container mb-8 lg:space-y-28 md:space-y-12">
+      <main class="container mb-8">
         {{ content }}
       </main>
     </div>

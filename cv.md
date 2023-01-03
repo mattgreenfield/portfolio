@@ -3,7 +3,7 @@ layout: layout.liquid
 title: CV
 ---
 
-<section>
+<section class="mb-10">
     <h2>About me</h2>
     <p>I am an experienced frontend developer who's worked with React and Vue (both with typescript).
     I like working in small, collaborative teams, working alongside design and UX departments.
@@ -15,18 +15,17 @@ title: CV
 
 <section>
     <h2>My work</h2>
-<ul class="flex flex-wrap gap-2 mb-4 print:hidden">
-{% for tech in collections.tech %}
-  <li>
-    <label class="tag">
-        <input type="checkbox" value="{{ tech }}" x-model="selectedTech" name="selectedTech" class="sr-only" />
-        {{ tech }}
-        </label>
-  </li>
-{% endfor %}
-</ul>
-
-<ul class="space-y-4 print:space-y-8">
+    <ul class="flex flex-wrap gap-2 mb-4 print:hidden">
+    {%- for tech in collections.tech -%}
+    <li>
+        <label class="tag">
+            <input type="checkbox" value="{{ tech }}" x-model="selectedTech" name="selectedTech" class="sr-only" />
+            {{ tech }}
+            </label>
+    </li>
+    {%- endfor -%}
+    </ul>
+<ul class="space-y-8 print:space-y-8">
 {%- for job in collections.job reversed -%}
     <li class="card" id="{{ job.data.slug }}">
         <header class="mb-4">

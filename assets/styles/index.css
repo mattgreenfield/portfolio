@@ -40,6 +40,8 @@
 .site-footer {
   @apply grid md:flex items-end px-5 mx-auto max-w-screen-2xl sticky bottom-0 gap-2 pt-40 pb-4;
   text-shadow: 0px -1px 0px #c8c8c87a;
+
+  --color-page-bg: var(--color-primary);
 }
 
 .button {
@@ -106,7 +108,7 @@
 
 .link {
   text-decoration-color: var(--color-secondary);
-  box-shadow: inset 0px -0.15em 0px white,
+  box-shadow: inset 0px -0.15em 0px var(--color-page-bg),
     inset 0 -0.35em 0 var(--color-secondary);
 
   &,

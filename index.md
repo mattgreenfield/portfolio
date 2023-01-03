@@ -30,8 +30,9 @@
 }
 ---
 
+<div class="space-y-10 lg:space-y-28 md:space-y-12">
 <header 
-class="mb-10 mt-20 flex gap-10"
+class="mb-10 mt-20"
 x-data="{ 
     scrolled: 0,
     strings: ['work for everyone', 'work on all devices', 'convert', 'just work' ],
@@ -47,7 +48,7 @@ x-data="{
         this.headerScrollPerc = top / 1.2;
     },
     init() {
-        this.toTop = $root.getBoundingClientRect().y;
+        this.toTop = window.pageYOffset + $root.getBoundingClientRect().top
         this.setScrollPerc();
         const incrementString = () => {
             if (this.currentIndex === this.strings.length - 1) {
@@ -61,7 +62,8 @@ x-data="{
 }"
 @scroll.window.throttle.16ms="handleScroll"
 >
-    <div class="mb-20">
+    <div class="flex gap-10">
+    <div class="mb-10">
         <h1 class="font-semibold text-2xl md:text-4xl overflow-hidden">
             <span class="block">
                 Hey, I’m Matt.
@@ -94,30 +96,28 @@ x-data="{
             </div>
         </div>
     </div>
-
+    </div>
+    <div class="info-box">
+        <h2 class="text-lg">I'm looking for work</h2>
+        <p>I'm currently looking for remote or hybrid frontend developer roles in Sussex. <a class="font-semibold link" href="mailto:gmattgreenfield@gmail.com">Please get in touch</a></p>
+    </div>
 </header>
-
-<div class="info-box">
-    <h2 class="text-lg">I'm looking for work</h2>
-    <p>I'm currently looking for remote or hybrid frontend developer roles in Sussex. <a class="font-semibold link" href="mailto:gmattgreenfield@gmail.com">Please get in touch</a></p>
-</div>
 
 <section>
     <h2>Latest side projects</h2>
     <p>There’s no such thing as a bad idea right? ....right?</p>
-
-<ul class="grid gap-4 mt-2 sm:grid-cols-2">
-    {%- for project in sideProjects -%}
-    <li>
-        <a href="{{project.href}}" class="group overflow-hidden block card !pt-14 !pb-2.5" target="_blank">
-            <div class="translate-y-6 group-hover:translate-y-0 duration-300">
-                <h3 class="m-0">{{project.title}}</h3>
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-gray-500 text-base link-with-arrow">View on Github</span>
-            </div>
-        </a>
-    </li>
-    {%- endfor -%}
-</ul>
+    <ul class="grid gap-4 mt-2 sm:grid-cols-2">
+        {%- for project in sideProjects -%}
+        <li>
+            <a href="{{project.href}}" class="group overflow-hidden block card !pt-14 !pb-2.5" target="_blank">
+                <div class="translate-y-6 group-hover:translate-y-0 duration-300">
+                    <h3 class="m-0">{{project.title}}</h3>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-gray-500 text-base link-with-arrow">View on Github</span>
+                </div>
+            </a>
+        </li>
+        {%- endfor -%}
+    </ul>
 </section>
 
 <section 
@@ -197,7 +197,6 @@ x-data="{
         </li>
         {%- endfor -%}
     </ul>
-
 </section>
 
 <section>
@@ -207,33 +206,32 @@ x-data="{
             <a href="/cv" class="link">View All</a>
         </div>
     </div>
-
-    {% assign jobs = collections.job | reverse %}
-    {% assign job = jobs[0] %}
-
-<div class="card">
-    <div class="flex gap-4 items-start mb-2">
-        <div class="w-10 h-10">
-        {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
-        {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}
-        {%- image filename, alt, '40px' -%}
+    {%- assign jobs = collections.job | reverse -%}
+    {%- assign job = jobs[0] -%}
+    <div class="card">
+        <div class="flex gap-4 items-start mb-2">
+            <div class="w-10 h-10">
+            {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
+            {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}
+            {%- image filename, alt, '40px' -%}
+            </div>
+            <div>
+                <h3 class="mb-0 leading-none text-lg">{{ job.data.name }}</h3>
+                <span class="text-base">{{ job.data.job }}</span>
+            </div>
+            <div class="text-gray-500 -mt-2 ml-auto text-sm">
+                {{ job.date | date }} -&nbsp;
+                {%- if job.data.endDate -%}
+                    {{ job.data.endDate | date }}
+                {%- else -%}
+                    present
+                {%- endif -%}
+            </div>
         </div>
-        <div>
-            <h3 class="mb-0 leading-none text-lg">{{ job.data.name }}</h3>
-            <span class="text-base">{{ job.data.job }}</span>
-        </div>
-        <div class="text-gray-500 -mt-2 ml-auto text-sm">
-            {{ job.date | date }} -&nbsp;
-            {%- if job.data.endDate -%}
-                {{ job.data.endDate | date }}
-            {%- else -%}
-                present
-            {%- endif -%}
+        <div>{{ job.templateContent }}</div>
+        <div class="text-center bg-gradient-to-t from-white pb-5 pt-20 relative -bottom-6 -mt-56">
+            <a href="/cv#upzelo" class=" bg-white link-with-arrow">Read more about this role</a>
         </div>
     </div>
-    <div>{{ job.templateContent }}</div>
-    <div class="text-center bg-gradient-to-t from-white pb-5 pt-20 relative -bottom-6 -mt-56">
-        <a href="/cv#upzelo" class=" bg-white link-with-arrow">Read more about this role</a>
-    </div>
-</div>
 </section>
+</div>
