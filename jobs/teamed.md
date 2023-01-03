@@ -1,9 +1,16 @@
 ---
-tags: job
+tags: [React, Tailwind, RxJS]
 name: Teamed
 slug: teamed
 job: Senior frontend developer
-tech: [React, Tailwind, RxJS]
+images:
+  [
+    "teamed/1.png",
+    "teamed/2.svg",
+    "teamed/3.png",
+    "teamed/4.png",
+    "teamed/5.png",
+  ]
 date: 2020-10-00
 endDate: 2021-09-00
 ---

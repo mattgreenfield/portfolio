@@ -1,9 +1,10 @@
 ---
-tags: job
+tags:
+  [Vue, Typescript, ChartJs, PWA, VueX, Cypress, CSS, Sass, Canvas, Storybook]
 name: StratumFive
 slug: s5
 job: Frontend developer
-tech: [Vue, Typescript, VueX, Cypress, CSS, Sass, Canvas, Storybook, ChartJs]
+images: ["s5/1.png", "s5/2.png"]
 date: 2018-11-00
 endDate: 2020-11-00
 ---

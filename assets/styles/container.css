@@ -1,11 +1,3 @@
 .container {
-  @apply mx-auto block;
-}
-
-.container--medium {
-  max-width: 960px;
-}
-
-.container--large {
-  max-width: 960px;
+  @apply mx-auto block max-w-screen-lg;
 }

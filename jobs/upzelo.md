@@ -1,9 +1,17 @@
 ---
-tags: job
+tags: [Vue 3, Laravel, Cypress, Tailwind]
 name: Upzelo
 slug: upzelo
 job: Senior frontend developer
-tech: [Vue 3, Laravel, Cypress, Tailwind]
+images:
+  [
+    "upzelo/1.jpg",
+    "upzelo/2.jpg",
+    "upzelo/3.jpg",
+    "upzelo/4.jpg",
+    "upzelo/5.jpg",
+    "upzelo/6.jpg",
+  ]
 date: 2021-09-00
 endDate: null
 ---

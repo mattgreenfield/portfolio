@@ -1,13 +1,21 @@
 .card {
-  @apply border-gray-200 rounded-2xl px-4 py-6 sm:p-6 border bg-white text-gray-800;
+  @apply px-4 py-6 sm:p-6  bg-white text-gray-800 overflow-hidden;
   @apply print:border-none print:p-0 print:rounded-none;
+  /* @apply border-gray-200 rounded-lg border; */
+  @apply border-black rounded border-2;
+}
 
-  /* img {
-    clip-path: polygon(100% 0, 0 100%, 100% 100%);
-    position: relative;
-    bottom: -18px;
-    right: -18px;
-    width: 30%;
-    margin-left: auto;
-  } */
+a.card {
+  transition: box-shadow 200ms ease, transform 200ms ease;
+
+  &:hover {
+    transform: translate(4px, -4px);
+    box-shadow: -8px 8px 0 var(--color-secondary);
+  }
+}
+
+.card.follow-cursor {
+  transform: rotate(calc(var(--pos-y) * 0.1deg));
+  box-shadow: calc(var(--pos-x) * -1px) calc(var(--pos-y) * -1px) 0
+    var(--color-secondary);
 }

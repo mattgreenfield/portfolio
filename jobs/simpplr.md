@@ -1,9 +1,8 @@
 ---
-tags: job
+tags: [React, GraphQL, CSS, Modules, Sass, React Native, Agile, HTML Email]
 name: Simpplr
 slug: simpplr
 job: Frontend developer
-tech: [React, GraphQL, CSS, Modules, Sass, React Native, Agile, HTML Email]
 date: 2017-10-00
 endDate: 2018-11-00
 ---

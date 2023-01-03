@@ -1,10 +1,8 @@
-.Header {
-  display: flex;
-  margin-bottom: 40px;
-  @apply print:mb-2;
+.header {
+  @apply flex print:mb-2;
 }
 
-.Header__logo {
+.header__logo {
   width: 180px;
   box-shadow: none;
 

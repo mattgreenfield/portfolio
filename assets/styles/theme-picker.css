@@ -1,11 +1,11 @@
-.ThemePicker {
+.theme-picker {
   @apply font-sans;
   position: absolute;
   right: 10px;
   top: 10px;
 }
 
-.ThemePicker__toggle {
+.theme-picker__toggle {
   border-radius: 1em;
   color: transparent;
   cursor: pointer;
@@ -41,6 +41,6 @@
   }
 }
 
-.ThemePicker__toggle__text {
+.theme-picker__toggle__text {
   @apply hidden sm:block whitespace-nowrap text-base mx-5 my-2.5;
 }
