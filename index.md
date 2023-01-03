@@ -65,10 +65,10 @@ x-data="{
     <div class="flex gap-10">
     <div class="mb-10">
         <h1 class="font-semibold text-2xl md:text-4xl overflow-hidden">
-            <span class="block">
-                Hey, I’m Matt.
+            <span class="sm:block">
+                Hey, I’m Matt,
             </span>
-            a frontend developer creating <br/>interfaces that&nbsp;<span class="relative">
+            a frontend developer creating <br class="hidden sm:block" />interfaces that&nbsp;<span class="relative">
             {%- for string in headerStrings -%}
                 <span x-show="currentIndex === {{forloop.index0}}" x-cloak
                     class="absolute w-screen"
@@ -209,7 +209,7 @@ x-data="{
     {%- assign jobs = collections.job | reverse -%}
     {%- assign job = jobs[0] -%}
     <div class="card">
-        <div class="flex gap-4 items-start mb-2">
+        <div class="flex gap-4 items-start mb-2 flex-wrap">
             <div class="w-10 h-10">
             {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
             {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}

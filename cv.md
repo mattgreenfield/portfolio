@@ -29,7 +29,7 @@ title: CV
 {%- for job in collections.job reversed -%}
     <li class="card" id="{{ job.data.slug }}">
         <header class="mb-4">
-            <div class="flex gap-2 items-center mb-2">
+            <div class="flex gap-2 items-center mb-2 flex-wrap">
                 <div class="w-6 h-6">
                 {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
                 {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}
