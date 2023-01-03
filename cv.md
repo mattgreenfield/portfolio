@@ -31,7 +31,11 @@ title: CV
     <li class="card" id="{{ job.data.slug }}">
         <header class="mb-4">
             <div class="flex gap-2 items-center mb-2">
-                <img src="/assets/images/{{ job.data.slug }}.png" alt="The {{ job.data.name }} logo" class="w-6 h-6"/>
+                <div class="w-6 h-6">
+                {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
+                {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}
+                {%- image filename, alt, '24px' -%}
+                </div>
                 <h3 class="mt-0 mb-0">{{ job.data.name }}</h3>
                 <div class="text-gray-500 -mt-2 ml-auto text-sm">
                     {{ job.date | date }} -&nbsp;

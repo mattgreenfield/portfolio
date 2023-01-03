@@ -213,7 +213,11 @@ x-data="{
 
 <div class="card">
     <div class="flex gap-4 items-start mb-2">
-        <img src="/assets/images/{{ job.data.slug }}.png" alt="The {{ job.data.name }} logo" class="w-10 h-10"/>
+        <div class="w-10 h-10">
+        {%- assign filename = "assets/images/" | append: job.data.slug | append: '.png' -%}
+        {%- capture alt -%}The {{ job.data.name }} logo{%- endcapture -%}
+        {%- image filename, alt, '40px' -%}
+        </div>
         <div>
             <h3 class="mb-0 leading-none text-lg">{{ job.data.name }}</h3>
             <span class="text-base">{{ job.data.job }}</span>
