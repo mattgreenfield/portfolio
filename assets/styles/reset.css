@@ -16,10 +16,10 @@ h6 {
 }
 
 h1 {
-  font-size: 2.8rem;
+  @apply text-4xl sm:text-[2.8rem];
 }
 h2 {
-  font-size: 1.6rem;
+  @apply text-xl sm:text-[1.6rem];
 }
 h3 {
   font-size: 1.4rem;

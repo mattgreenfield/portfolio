@@ -64,7 +64,7 @@ x-data="{
 >
     <div class="flex gap-10">
     <div class="mb-10">
-        <h1 class="font-semibold text-2xl md:text-4xl overflow-hidden">
+        <h1 class="font-semibold text-xl sm:text-2xl md:text-4xl overflow-hidden">
             <span class="sm:block">
                 Hey, I’m Matt,
             </span>

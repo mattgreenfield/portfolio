@@ -16,6 +16,10 @@
   display: none;
 }
 
+html {
+  @apply sm:text-[18px];
+}
+
 .page {
   background-color: var(--color-page-bg);
   color: var(--color-text);
@@ -24,7 +28,7 @@
   z-index: 1;
   box-shadow: 6px 6px 15px -7px #6a6a6a;
 
-  @apply flex flex-col relative p-3 sm:p-4 md:p-6 leading-relaxed text-lg m-2 sm:m-2.5;
+  @apply flex flex-col relative p-3 sm:p-4 md:p-6 leading-relaxed m-2 sm:m-2.5;
 
   transition-property: color background-color;
   transition-duration: 0.1s;
