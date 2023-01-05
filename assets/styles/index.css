@@ -126,7 +126,7 @@ html {
 
   &:focus {
     border-radius: 6px;
-    @extend %focus;
+    /* @extend %focus; */
   }
 }
 

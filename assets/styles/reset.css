@@ -36,9 +36,9 @@ button {
   color: inherit;
   font-size: inherit;
 
-  &:focus {
+  /* &:focus {
     @extend %focus;
-  }
+  } */
 }
 
 ::selection {

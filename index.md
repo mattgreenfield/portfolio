@@ -32,7 +32,7 @@
 
 <div class="space-y-10 lg:space-y-28 md:space-y-12">
 <header 
-class="mb-10 mt-20"
+class="mb-10 mt-10 sm:mt-20"
 x-data="{ 
     scrolled: 0,
     strings: ['work for everyone', 'work on all devices', 'convert', 'just work' ],
@@ -64,7 +64,7 @@ x-data="{
 >
     <div class="flex gap-10">
     <div class="mb-10">
-        <h1 class="font-semibold text-xl sm:text-2xl md:text-4xl overflow-hidden">
+        <h1 class="font-semibold text-xl sm:text-2xl md:text-4xl">
             <span class="sm:block">
                 Hey, I’m Matt,
             </span>
@@ -73,11 +73,11 @@ x-data="{
                 <span x-show="currentIndex === {{forloop.index0}}" x-cloak
                     class="absolute w-screen"
                     x-transition:enter="transition duration-1000"
-                    x-transition:enter-start="transform translate-y-full opacity-0"
+                    x-transition:enter-start="transform translate-y-1/2 opacity-0"
                     x-transition:enter-end="transform translate-y-0 opacity-1"
                     x-transition:leave="transition duration-1000"
                     x-transition:leave-start="transform"
-                    x-transition:leave-end="transform -translate-y-full opacity-0"
+                    x-transition:leave-end="transform -translate-y-1/2 opacity-0"
                 >{{ string }}.</span>
             {%- endfor -%}</span>
         </h1>
@@ -229,8 +229,9 @@ x-data="{
             </div>
         </div>
         <div>{{ job.templateContent }}</div>
-        <div class="text-center bg-gradient-to-t from-white pb-5 pt-20 relative -bottom-6 -mt-56">
-            <a href="/cv#upzelo" class=" bg-white link-with-arrow">Read more about this role</a>
+        <div class="text-center relative -bottom-6 -mt-56">
+            <div class="not-sr-only bg-gradient-to-t from-white h-20"></div>
+            <a href="/cv#upzelo" class=" bg-white link-with-arrow block w-full pb-5 pt-2">Read more about this role</a>
         </div>
     </div>
 </section>

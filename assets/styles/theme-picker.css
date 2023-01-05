@@ -9,7 +9,7 @@
   border-radius: 1em;
   color: transparent;
   cursor: pointer;
-  display: flex;
+  @apply items-center flex;
   font-size: 32px;
   overflow: hidden;
   position: relative;
@@ -32,7 +32,7 @@
     color: var(--color-page-bg);
 
     @media screen and (min-width: 640px) {
-      width: 194px;
+      width: 195px;
     }
 
     svg {
@@ -42,5 +42,5 @@
 }
 
 .theme-picker__toggle__text {
-  @apply hidden sm:block whitespace-nowrap text-base mx-5 my-2.5;
+  @apply hidden sm:block whitespace-nowrap text-sm mx-5;
 }

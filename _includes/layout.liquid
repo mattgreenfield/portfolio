@@ -37,6 +37,10 @@ title: Matt Greenfield
       return this.themes[newIndex];
     },
     init() {
+      // NOTE: Remove the theme classes that were added before Alpine loaded, Alpine will add them back
+      const classes = [...document.documentElement.classList].filter((c) => !c.startsWith('theme--'));
+      document.documentElement.classList = classes;
+
       const theme = localStorage.getItem('theme');
       if (theme) { this.theme = theme; }
     }
@@ -57,6 +61,12 @@ title: Matt Greenfield
       rel="stylesheet"
       href="/assets/styles/index.css?v={{ pkg.version }}"
     />
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme) {
+        document.documentElement.classList.add(`theme--${theme}`);
+      }
+    </script>
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- favicon -->
