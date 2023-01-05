@@ -13,6 +13,10 @@ title: CV
     <p>In my spare time, I enjoy playing the drums and running.</p>
 </section/>
 
+<!-- <section>
+ TODO: Q&A
+</section> -->
+
 <section>
     <h2>My work</h2>
     <ul class="flex flex-wrap gap-2 mb-4 print:hidden">
@@ -50,7 +54,7 @@ title: CV
                 {% if tech == 'job' %}{% continue %}{% else %}<li class="tag">{{ tech }}</li>{% endif %}
             {%- endfor -%}</ul>
         </header>
-        <div class="mb-8 max-w-prose">{{ job.templateContent }}</div>
+        <div class="mb-8 space-y-4">{{ job.templateContent }}</div>
         <section x-data="{ 
             selectedIndex: 0,
             positions: [],

@@ -7,4 +7,8 @@ date: 2017-10-00
 endDate: 2018-11-00
 ---
 
-A user customisable dashboard built with React, Redux, and CSS modules. We later went on to a greenfield project with GraphQL and shared components across React and React Native.
+I was responsible for building a user-customizable dashboard using React, Redux, and CSS modules. To document and develop my work, I utilized Storybook. Throughout the project, I worked closely with the design team to develop ideas and suggest improvements.
+
+Later, we moved on to a greenfield project where we implemented GraphQL and shared components across React and React Native.
+
+The work was managed using Agile methodologies, and I took a scrum master training course to learn more about this approach.
