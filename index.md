@@ -68,7 +68,7 @@ x-data="{
             <span class="sm:block">
                 Hey, I’m Matt,
             </span>
-            a frontend developer creating <br class="hidden sm:block" />interfaces that&nbsp;<span class="relative">
+            a frontend<br class="sm:hidden" /> developer creating <br class="hidden sm:block" />interfaces that&nbsp;<span class="relative block sm:inline h-[1em]">
             {%- for string in headerStrings -%}
                 <span x-show="currentIndex === {{forloop.index0}}" x-cloak
                     class="absolute w-screen"
